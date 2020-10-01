@@ -1,15 +1,17 @@
-import Link from 'next/link'
 import Layout from '../components/Layout'
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+const IndexPage = () => {
+  const handleClick = async () => {
+    const res = await fetch('/api/auth')
+    console.log(res)
+  }
+
+  return (
+    <Layout title='Home'>
+      <h1>Hello Next.js 👋</h1>
+      <button onClick={handleClick}>Set Cookies (Login)</button>
+    </Layout>
+  )
+}
 
 export default IndexPage

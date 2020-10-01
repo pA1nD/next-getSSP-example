@@ -8,7 +8,11 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@types/cookies": "^0.7.4",
+    "@types/node-fetch": "^2.5.7",
+    "cookies": "^0.8.0",
     "next": "latest",
+    "node-fetch": "^2.6.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
